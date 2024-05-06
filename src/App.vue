@@ -1,7 +1,9 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link class="nav-element" to="/">Home</router-link>
+    <router-link class="nav-element" to="/works">Works</router-link>
+    <router-link class="nav-element" to="/Archive">Archive</router-link>
+    <router-link class="nav-element" to="/about">About</router-link>
   </nav>
   <router-view/>
 </template>
@@ -25,6 +27,10 @@ nav a {
 }
 
 nav a.router-link-exact-active {
-  color: #42b983;
+  color: #2b85ec;
+}
+
+.nav-element {
+  margin: 10px;
 }
 </style>
