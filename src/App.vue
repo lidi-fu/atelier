@@ -1,12 +1,21 @@
 <template>
-  <nav>
-    <router-link class="nav-element" to="/">Home</router-link>
-    <router-link class="nav-element" to="/works">Works</router-link>
-    <router-link class="nav-element" to="/Archive">Archive</router-link>
-    <router-link class="nav-element" to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <NavBar />
+  <div id="app">
+    <router-view/>
+  </div>
 </template>
+
+<script>
+import NavBar from './views/NavBar.vue'
+
+export default {
+  name: 'App',
+  components: {
+    NavBar
+  }
+}
+</script>
+
 
 <style>
 #app {
@@ -14,23 +23,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  width: 100%;
+  height: 100%;
+  margin: auto;
 }
 
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #2b85ec;
-}
-
-.nav-element {
-  margin: 10px;
+body::-webkit-scrollbar {
+  width: 0;
 }
 </style>
