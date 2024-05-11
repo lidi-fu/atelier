@@ -29,6 +29,17 @@
 
 <style scoped>
 .home {
+  position: fixed; /* Position the navbar relative to the viewport */
+  top: 0; /* Place the navbar at the top of the viewport */
+  left: 50%; /* Move the navbar to the center horizontally */
+  transform: translateX(-50%); /* Adjust the position to center the navbar */
+  width: 80%; /* Set the width of the navbar */
+  max-width: 1500px; /* Set a maximum width if needed */
+  z-index: 1000; /* Ensure the navbar appears above other content */
+  display: flex; /* Use flexbox to align navbar items */
+  justify-content: space-between; /* Align items with space between them */
+  align-items: center; /* Center items vertically */
+  padding: 10px 20px; /* Add padding around navbar content */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -37,7 +48,7 @@
   padding-right: 38px;
   padding-top:10px;
   padding-bottom: 10px;
-  font-weight: bold;
+  font-weight: bold; 
 }
 
 nav a {

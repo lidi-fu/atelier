@@ -36,8 +36,10 @@
   
   .archive {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
+    gap: 30px;
   }
   
   .archive-item {
