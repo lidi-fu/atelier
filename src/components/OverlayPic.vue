@@ -3,7 +3,7 @@
     <div class="background"></div>
     <div class="overlay-content">
       <div class="image-container">
-        <img :src="selectedImage.src" :alt="selectedImage.name" class="overlay-image">
+        <img :src="selectedImage.largeSrc" :alt="selectedImage.name" class="overlay-image">
       </div>
       <div class="overlay-info">
         <h2>{{ selectedImage.name }}</h2>
@@ -67,8 +67,7 @@ export default {
 }
 
 .overlay-image {
-  max-height: 100%;
-  max-width: 100%;
+  height: 80vh;
   object-fit: contain;
 }
 

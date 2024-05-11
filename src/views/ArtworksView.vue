@@ -1,7 +1,7 @@
 <template>
   <div class="artworks-view">
     <div class="gallery">
-      <div v-for="(image, index) in images" :key="index" class="gallery-item" @click="showOverlay(image)">
+      <div v-for="(image, index) in reversedImages" :key="index" class="gallery-item" @click="showOverlay(image)">
         <div class="image-container">
           <img :src="image.src" :alt="image.name" class="gallery-image">
         </div>
@@ -22,12 +22,14 @@ export default {
   data() {
     return {
       images: [
-        { id: 1, src: require('@/assets/Artworks/art1.jpg'), name: 'Image 1', year: 2020, description: 'Description 1' },
-        { id: 2, src: require('@/assets/Artworks/art2.jpg'), name: 'Image 2', year: 2021, description: 'Description 2' },
-        { id: 3, src: require('@/assets/Artworks/art3.jpg'), name: 'Image 3', year: 2022, description: 'Description 3' },
-        { id: 4, src: require('@/assets/Artworks/art4.jpg'), name: 'Image 4', year: 2022, description: 'Description 4' },
-        { id: 5, src: require('@/assets/Artworks/art5.jpg'), name: 'Image 5', year: 2022, description: 'Description 5' },
-        { id: 6, src: require('@/assets/Artworks/art6.jpg'), name: 'Image 6', year: 2022, description: 'Description 6' },
+        { id: 1, src: require('@/assets/Artworks/art1.jpg'), largeSrc: require('@/assets/Artworks/art1-large.jpg'), name: 'Void', year: 2022, description: 'Description 1' },
+        { id: 2, src: require('@/assets/Artworks/art2.jpg'), largeSrc: require('@/assets/Artworks/art2-large.jpg'), name: 'Alienation', year: 2022, description: 'Description 2' },
+        // { id: 3, src: require('@/assets/Artworks/art3.jpg'), largeSrc: require('@/assets/Artworks/art3-large.jpg'), name: 'Dreams', year: 2019, description: 'Description 3' },
+        { id: 4, src: require('@/assets/Artworks/art4.jpg'), largeSrc: require('@/assets/Artworks/art4-large.jpg'), name: 'Anxiety at Night', year: 2022, description: 'Description 4' },
+        { id: 5, src: require('@/assets/Artworks/art5.jpg'), largeSrc: require('@/assets/Artworks/art5-large.jpg'), name: 'Lust', year: 2022, description: 'Description 5' },
+        { id: 6, src: require('@/assets/Artworks/art6.jpg'), largeSrc: require('@/assets/Artworks/art6-large.jpg'), name: 'Encoded', year: 2023, description: 'Description 6' },
+        { id: 7, src: require('@/assets/Artworks/art7.jpg'), largeSrc: require('@/assets/Artworks/art7-large.jpg'), name: 'Libido', year: 2023, description: 'Description 7' },
+        { id: 8, src: require('@/assets/Artworks/art8.jpg'), largeSrc: require('@/assets/Artworks/art8-large.jpg'), name: 'Embrace', year: 2024, description: 'Description 8' },
         // Add more image objects here
       ],
       selectedImage: null,
@@ -44,6 +46,11 @@ export default {
     },
     closeOverlay() {
       this.showOverlayFlag = false;
+    }
+  },
+  computed: {
+    reversedImages() {
+      return this.images.slice().reverse();
     }
   }
 };
@@ -68,8 +75,7 @@ export default {
 }
 
 .image-container {
-  width: 100%;
-  height: 360px;
+  width:100%;
   overflow: hidden;
 }
 

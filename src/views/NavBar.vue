@@ -49,6 +49,7 @@
   padding-top:10px;
   padding-bottom: 10px;
   font-weight: bold; 
+  background-color: #eeeeee;
 }
 
 nav a {

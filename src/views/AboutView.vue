@@ -5,6 +5,7 @@
         <img class='profile-pic' src="@/assets/profile.jpg" alt="profile" />
         </div>
         <div class="contacts">
+          <p class="name">Lidi Fu</p>
           <p class="medium">Contact</p>
           <div class="contact-content">
           <p class="email">Email</p>
@@ -57,6 +58,9 @@ export default {
   gap: 20px;
 }
 
+.profile-pic {
+  border-radius: 8px;
+}
 .contacts {
   padding-bottom: 35px;
 }
@@ -74,6 +78,11 @@ img {
   width: 100%
 }
 
+.name {
+  font-weight: 600;
+  font-size: x-large;
+  padding-bottom: 50px;
+}
 .medium {
   font-family: Lato;
 }
@@ -89,9 +98,14 @@ p {
   line-height: 0;
 }
 
+a {
+  color: rgb(109, 109, 109);
+}
+
 .light {
   color: rgb(161, 161, 161);
   padding-bottom: 10px;
+  font-size: small;
 }
 .left-side {
   width: 40vh;

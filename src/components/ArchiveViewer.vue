@@ -20,6 +20,8 @@
           { id: 3, src: require('@/assets/Archive/archive3.jpg'), name: 'Archive 3', year: 2022 },
           { id: 4, src: require('@/assets/Archive/archive4.jpg'), name: 'Archive 4', year: 2022 },
           { id: 5, src: require('@/assets/Archive/archive5.jpg'), name: 'Archive 5', year: 2022 },
+          { id: 6, src: require('@/assets/Archive/archive6.jpg'), name: 'Archive 6', year: 2022 },
+          { id: 7, src: require('@/assets/Archive/archive7.jpg'), name: 'Archive 7', year: 2022 },
           // Add more image objects here
         ],
       };
@@ -39,7 +41,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 30px;
+    gap: 20px;
   }
   
   .archive-item {
@@ -49,7 +51,6 @@
   
   .image-container {
     width: 100%;
-    height: 360px;
     overflow: hidden;
   }
   

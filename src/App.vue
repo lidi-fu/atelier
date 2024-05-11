@@ -24,6 +24,7 @@ export default {
 body {
   	margin: 0; 
     line-height: normal;
+    background-color: #eeeeee;
 }
 
 #app {
