@@ -23,17 +23,15 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .home {
-
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: 0;
-  height: calc(100vh-60px);
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 50px;
 }
 
 .statement {

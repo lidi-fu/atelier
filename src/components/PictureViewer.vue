@@ -57,8 +57,11 @@ export default {
     },
     nextImageOnMobile() {
       // Add logic to switch to the next image when clicking on the image on mobile devices
-      if (window.innerWidth <= 768 && this.currentIndex < this.images.length - 1) {
+      if (window.innerWidth <= 768) {
         this.currentIndex++;
+        if (this.currentIndex === this.images.length) {
+        this.currentIndex = 0;
+      }
       }
     }
   },
@@ -71,6 +74,7 @@ export default {
   flex-direction: column;
   align-items: center;
   width: 100%;
+  transform: translateY(20%);
 }
 
 .image-container {
