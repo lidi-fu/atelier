@@ -99,4 +99,5 @@ export default {
 .text {
   text-align: center;
 }
+
 </style>
