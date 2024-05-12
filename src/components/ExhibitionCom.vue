@@ -167,6 +167,7 @@ hr {
     margin-bottom: 20px;
 }
 
+
 @media screen and (max-width: 670px){
     .first-part {
         flex-direction: column;
