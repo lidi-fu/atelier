@@ -42,4 +42,17 @@ body::-webkit-scrollbar {
   width: 0;
 }
 
+.router {
+  margin: auto;
+}
+
+@media screen and (max-width: 670px){
+  p {
+    font-size: smaller;
+  }
+
+  #app {
+    padding-top: 60px;
+  }
+}
 </style>

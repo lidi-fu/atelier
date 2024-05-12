@@ -5,11 +5,10 @@
       <div class="image-container">
         <img :src="selectedImage.largeSrc" :alt="selectedImage.name" class="overlay-image">
       </div>
-      <div class="overlay-info">
+      <!-- <div class="overlay-info">
         <h2>{{ selectedImage.name }}</h2>
         <p>{{ selectedImage.description }}</p>
-        <!-- Add more image details here -->
-      </div>
+      </div> -->
     </div>
   </div>
 </template>

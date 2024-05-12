@@ -22,14 +22,14 @@ export default {
   data() {
     return {
       images: [
-        { id: 1, src: require('@/assets/Artworks/art1.jpg'), largeSrc: require('@/assets/Artworks/art1-large.jpg'), name: 'Void', year: 2022, description: 'Description 1' },
-        { id: 2, src: require('@/assets/Artworks/art2.jpg'), largeSrc: require('@/assets/Artworks/art2-large.jpg'), name: 'Alienation', year: 2022, description: 'Description 2' },
+        { id: 1, src: require('@/assets/Artworks/art1.jpg'), largeSrc: require('@/assets/Artworks/art1-large.png'), name: 'Void', year: 2022, description: '' },
+        { id: 2, src: require('@/assets/Artworks/art2.jpg'), largeSrc: require('@/assets/Artworks/art2-large.png'), name: 'Alienation', year: 2022, description: '' },
         // { id: 3, src: require('@/assets/Artworks/art3.jpg'), largeSrc: require('@/assets/Artworks/art3-large.jpg'), name: 'Dreams', year: 2019, description: 'Description 3' },
-        { id: 4, src: require('@/assets/Artworks/art4.jpg'), largeSrc: require('@/assets/Artworks/art4-large.jpg'), name: 'Anxiety at Night', year: 2022, description: 'Description 4' },
-        { id: 5, src: require('@/assets/Artworks/art5.jpg'), largeSrc: require('@/assets/Artworks/art5-large.jpg'), name: 'Lust', year: 2022, description: 'Description 5' },
-        { id: 6, src: require('@/assets/Artworks/art6.jpg'), largeSrc: require('@/assets/Artworks/art6-large.jpg'), name: 'Encoded', year: 2023, description: 'Description 6' },
-        { id: 7, src: require('@/assets/Artworks/art7.jpg'), largeSrc: require('@/assets/Artworks/art7-large.jpg'), name: 'Libido', year: 2023, description: 'Description 7' },
-        { id: 8, src: require('@/assets/Artworks/art8.jpg'), largeSrc: require('@/assets/Artworks/art8-large.jpg'), name: 'Embrace', year: 2024, description: 'Description 8' },
+        { id: 4, src: require('@/assets/Artworks/art4.jpg'), largeSrc: require('@/assets/Artworks/art4-large.png'), name: 'Anxiety at Night', year: 2022, description: '' },
+        { id: 5, src: require('@/assets/Artworks/art5.jpg'), largeSrc: require('@/assets/Artworks/art5-large.png'), name: 'Lust', year: 2022, description: '' },
+        { id: 6, src: require('@/assets/Artworks/art6.jpg'), largeSrc: require('@/assets/Artworks/art6-large.png'), name: 'Encoded', year: 2023, description: '' },
+        { id: 7, src: require('@/assets/Artworks/art7.jpg'), largeSrc: require('@/assets/Artworks/art7-large.png'), name: 'Libido', year: 2023, description: '' },
+        { id: 8, src: require('@/assets/Artworks/art8.jpg'), largeSrc: require('@/assets/Artworks/art8-large.png'), name: 'Embrace', year: 2024, description: '' },
         // Add more image objects here
       ],
       selectedImage: null,
@@ -100,5 +100,15 @@ export default {
 
 .image-year {
   color: #666;
+}
+
+@media screen and (max-width: 670px){
+  .gallery-item {
+    width: calc(50% - 20px); /* Adjust as needed */
+  }
+
+  .gallery {
+    justify-content: space-between;
+  }
 }
 </style>

@@ -88,4 +88,24 @@ img {
   margin-right: 10px;
 }
 
+@media screen and (max-width: 670px){
+  .home {
+    width: 90%;
+  }
+  .nav-bar {
+    width: 100%;
+    position: absolute;
+    margin-top: 80px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    background-color: #eeeeee;
+    display: flex;
+  }
+
+  .nav-element-artwork {
+    margin-left:0px;
+  }
+
+}
+
 </style>

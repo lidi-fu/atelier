@@ -1,10 +1,12 @@
 <template>
   <div class="exhibitions">
     <div class="about-me">
-          <p class="statement">"My artistic endeavors are an intricate journey delving into spirituality through both visual and conceptual dimensions. Motivated by my profound intrigue with the interplay of shapes, forms, colors, and compositions, my work unfolds as a fusion of tradition and innovation.<br> Navigating the realm between conventional academic roots and the avant-garde realm of new media art, I continuously seek to unearth the potential and tension inherent in both worlds."</p>
+        <p class="statement">"My artistic endeavors are an intricate journey delving into spirituality through both visual and conceptual dimensions. Motivated by my profound intrigue with the interplay of shapes, forms, colors, and compositions, my work unfolds as a fusion of tradition and innovation.<br> Navigating the realm between conventional academic roots and the avant-garde realm of new media art, I continuously seek to unearth the potential and tension inherent in both worlds."</p>
     </div>
-    <p class="title">Exhibitions & Media Cover</p>
-    <hr>
+
+        <p class="title">Exhibitions & Media Cover</p>
+        <hr>
+
     <div class="exhibition">
         <div v-for="(exhibition) in reversedExhibition" :key="exhibition.id" class="exhibition-item">
             <div class="exhibition-info">
@@ -111,18 +113,18 @@ export default {
 </script>
 
 <style scoped>
-.title {
-    font-family: Lato;
-    margin-bottom: 30px;
-}
 
 .exhibitions {
-    width: 80vh;
 }
 .exhibition-info {
     display: flex;
     flex-direction: column;
     width: 100%;
+}
+
+.title {
+    font-family: Lato;
+    margin-bottom: 30px;
 }
 
 .first-part {
@@ -163,5 +165,20 @@ hr {
 
 .last-line {
     margin-bottom: 20px;
+}
+
+@media screen and (max-width: 670px){
+    .first-part {
+        flex-direction: column;
+    }
+    p {
+        line-height: normal;
+        margin: 0px;
+        font-size: smaller;
+        padding-bottom: 5px;
+    }
+    .location {
+        color: rgb(119, 119, 119);
+    }
 }
 </style>

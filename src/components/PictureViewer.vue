@@ -1,15 +1,16 @@
 <template>
   <div class="picture-viewer">
     <div class="image-container">
-      <button @click="previousImage" class="nav-button">
-        <img class="button" src="@/assets/previous.svg" :class="{ 'no-hover': currentIndex === 0 }" />
+      <button @click="previousImage" class="nav-button touch-content">
+        <img class="button left-button" src="@/assets/previous.svg" />
       </button>
-      <img v-if="showImage" :key="currentImage.src" class="fade-image" :src="currentImage.src" :alt="currentImage.alt" />
-      <button @click="nextImage" class="nav-button">
-        <img class="button" src="@/assets/next.svg" :class="{ 'no-hover': currentIndex === images.length - 1 }" />
+      <img v-if="showImage" :key="currentImage.src" class="fade-image" :src="currentImage.src" :alt="currentImage.alt" @click="nextImageOnMobile"/>
+      <button @click="nextImage" class="nav-button touch-content">
+        <img class="button right-button" src="@/assets/next.svg"/>
       </button>
     </div>
     <p class="text">{{ currentImage.text }}</p>
+    <p class="touch">Tap to see next image</p>
   </div>
 </template>
 
@@ -40,13 +41,24 @@ export default {
   },
   methods: {
     nextImage() {
-      if (this.currentIndex < this.images.length - 1) {
-        this.currentIndex++;
+      this.currentIndex++;
+
+      if (this.currentIndex === this.images.length) {
+        this.currentIndex = 0;
       }
+      
     },
     previousImage() {
-      if (this.currentIndex > 0) {
         this.currentIndex--;
+
+        if (this.currentIndex < 0){
+          this.currentIndex = this.images.length-1;
+        }
+    },
+    nextImageOnMobile() {
+      // Add logic to switch to the next image when clicking on the image on mobile devices
+      if (window.innerWidth <= 768 && this.currentIndex < this.images.length - 1) {
+        this.currentIndex++;
       }
     }
   },
@@ -58,6 +70,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 .image-container {
@@ -79,6 +92,10 @@ export default {
   cursor: pointer;
 }
 
+.touch {
+  display: none;
+}
+
 .button:hover {
   background-color:  #b3c9e1;
   border-radius: 50px;
@@ -88,9 +105,7 @@ export default {
   outline: none;
 }
 
-.no-hover {
-  background-color: transparent !important;
-}
+
 .fade-image {
   object-fit: cover;
   width: 100%; /* Ensure image takes full width of container */
@@ -100,4 +115,39 @@ export default {
   text-align: center;
 }
 
+@media screen and (max-width: 1100px){
+  .left-button {
+    position: absolute;
+    left: 20px;
+  }
+
+  .image-container {
+    gap: 0;
+  }
+
+  .nav-button {
+    padding: 0px;
+  }
+  
+  .fade-image {
+    width: 100%;
+  }
+
+  .right-button {
+    position: absolute;
+    right: 20px;
+  }
+  
+}
+
+@media (hover:none) {
+  .touch-content {
+    display: none;
+  }
+
+  .touch {
+    display:block;
+    opacity: 0.5;
+  }
+}
 </style>
