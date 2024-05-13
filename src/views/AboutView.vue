@@ -30,6 +30,7 @@ export default {
   flex-direction: row;
   gap: 20px;
   justify-content: center;
+  margin-bottom: 120px;
 }
 
 
@@ -42,6 +43,7 @@ export default {
     .about-view {
       flex-direction: column;
       align-items: center;
+
     }
 
     .info {
