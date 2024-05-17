@@ -1,5 +1,5 @@
 <template>
-  <div class="picture-viewer">
+  <div v-if="imagesPreloaded" class="picture-viewer">
     <div class="image-container">
       <button @click="previousImage" class="nav-button touch-content">
         <img class="button left-button" src="@/assets/previous.svg" />
@@ -12,6 +12,7 @@
     <p class="text">{{ currentImage.text }}</p>
     <p class="touch">Tap to see next image</p>
   </div>
+  <div v-else>Loading</div>
 </template>
 
 <script>
@@ -31,7 +32,8 @@ export default {
         // Add more image objects as needed
       ].reverse(),
       currentIndex: 0,
-      showImage: true
+      showImage: false,
+      imagesPreloaded: false //Trage all images are loaded
     };
   },
   computed: {
@@ -63,8 +65,38 @@ export default {
         this.currentIndex = 0;
       }
       }
-    }
+    },
+    preloadImages() {
+      const promises = this.images.map(image => {
+        return new Promise((resolve) => {
+          const img = new Image();
+          img.src = image.src;
+          img.onload = () => {
+            console.log('Image loaded:', image.src);
+            resolve();
+          };
+          img.onerror = () => {
+            console.log('Failed to load image:', image.src);
+            resolve();
+          };
+        });
+      });
+      
+
+      Promise.all(promises).then(() => {
+        // All images are preloaded, show them
+        console.log('All images preloaded');
+        this.showImage = true;
+        this.imagesPreloaded = true;
+      });
+    },
+    
   },
+
+  mounted() {
+    // Preload images when the component is mounted
+    this.preloadImages();
+  }
 };
 </script>
 
