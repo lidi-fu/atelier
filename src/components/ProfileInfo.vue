@@ -9,10 +9,18 @@
                     <p class="name">Lidi Fu</p>
                     <p class="medium">Contact</p>
                     <div class="contact-content">
-                        <p class="email">Email</p>
+                        <div class="contact">
+                            <p class="email">Email</p>
                         <a href="mailto:lidi.fu@icloud.com">
                             <p>lidi.fu@icloud.com</p>
                         </a>
+                        </div>
+                        <div class="contact">
+                            <p class="email">My Design Works</p>
+                        <a href="https://www.lidifu.pro" target="_blank">
+                            <p>www.lidifu.pro</p>
+                        </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -61,7 +69,7 @@ export default {
 }
 .contact-content {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 20px;
 }
 
@@ -81,11 +89,23 @@ img {
 .medium {
   font-family: Lato;
 }
+.email {
+    font-size: medium;
+     color: rgb(109, 109, 109);
+
+}
+.contact {
+    padding-bottom: 10px;
+}
 
 .bold {
   padding-top: 20px;
   font-weight: 600;
   padding-bottom: 10px;
+}
+
+.contact p{
+    padding-bottom: 5px;
 }
 
 p {
@@ -94,7 +114,7 @@ p {
 }
 
 a {
-  color: rgb(109, 109, 109);
+  color: black;
 }
 
 .light {
@@ -117,7 +137,7 @@ a {
 
     .name {
         padding-top: 40px;
-        padding-bottom: 80px;
+        padding-bottom: 40px;
     }
     
     .up {
@@ -139,11 +159,15 @@ a {
         margin: 0px;
         padding: 0px;
     }
-
+    .contact {
+        padding-bottom: 0px;
+    }
     .profile {
         width: 200px;
     }
-
+    .email {
+        font-size: small;
+    }
     .medium {
         padding-bottom: 10px;
     }
