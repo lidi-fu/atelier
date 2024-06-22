@@ -13,7 +13,14 @@
                 <div class="first-part">
                     <div class="first-line">
                         <p class="year">{{ exhibition.year }}</p>
-                        <p class="city">{{ exhibition.city }}</p>
+                        <p class="city">
+                            <template v-if="exhibition.url">
+                                    <a :href="exhibition.url" target="_blank">{{ exhibition.city }}</a>
+                            </template>
+                            <template v-else>
+                                    {{ exhibition.city }}
+                            </template>
+                        </p>
                     </div>
                     <div class="second-line">
                         <p class="location">{{ exhibition.location }}</p>
@@ -101,6 +108,14 @@ export default {
                 location: 'HeLai Art Gallery',
                 city: 'Uster, Switzerland',
             },
+            { 
+                id: 11, 
+                name: 'Infinity', 
+                year: 2024, 
+                location: 'Florence Contemporary Gallery',
+                city: 'Online',
+                url: 'https://www.florencecontemporary.com/infinity'
+            },
             ]
         }
     },
@@ -167,6 +182,9 @@ hr {
     margin-bottom: 20px;
 }
 
+a {
+    color: rgb(17, 0, 251);
+}
 
 @media screen and (max-width: 670px){
     .first-part {
