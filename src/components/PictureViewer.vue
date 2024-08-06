@@ -29,6 +29,7 @@ export default {
         { src: require('@/assets/showreel/showreel7.jpg'), alt: 'Image 7', text: '2022 London, UK' },
         { src: require('@/assets/showreel/showreel8.jpg'), alt: 'Image 8', text: '2023 Uster, Switzerland' },
         { src: require('@/assets/showreel/showreel9.jpg'), alt: 'Image 9', text: '2023 Uster, Switzerland' },
+        { src: require('@/assets/showreel/showreel10.webp'), alt: 'Image 10', text: '2024 London, United Kingdom' },
         // Add more image objects as needed
       ].reverse(),
       currentIndex: 0,

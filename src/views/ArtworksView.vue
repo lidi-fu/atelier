@@ -29,7 +29,9 @@ export default {
         { id: 5, src: require('@/assets/Artworks/art5.jpg'), largeSrc: require('@/assets/Artworks/art5-large.png'), name: 'Lust', year: 2022, description: '' },
         { id: 6, src: require('@/assets/Artworks/art6.jpg'), largeSrc: require('@/assets/Artworks/art6-large.png'), name: 'Encoded', year: 2023, description: '' },
         { id: 7, src: require('@/assets/Artworks/art7.jpg'), largeSrc: require('@/assets/Artworks/art7-large.png'), name: 'Libido', year: 2023, description: '' },
-        { id: 8, src: require('@/assets/Artworks/art8.jpg'), largeSrc: require('@/assets/Artworks/art8-large.png'), name: 'Embrace', year: 2024, description: '' },
+        // { id: 8, src: require('@/assets/Artworks/art8.jpg'), largeSrc: require('@/assets/Artworks/art8-large.png'), name: 'Embrace', year: 2024, description: '' },
+        { id: 8, src: require('@/assets/Artworks/art9.webp'), largeSrc: require('@/assets/Artworks/art9-large.webp'), name: 'Embrace', year: 2024, description: '' },
+        { id: 8, src: require('@/assets/Artworks/art10.webp'), largeSrc: require('@/assets/Artworks/art10-large.webp'), name: 'Pray', year: 2024, description: '' },
         // Add more image objects here
       ],
       selectedImage: null,

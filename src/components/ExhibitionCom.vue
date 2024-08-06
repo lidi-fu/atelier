@@ -113,8 +113,15 @@ export default {
                 name: 'Infinity', 
                 year: 2024, 
                 location: 'Florence Contemporary Gallery',
-                city: 'Online',
+                city: 'Virtual Exhibition',
                 url: 'https://www.florencecontemporary.com/infinity'
+            },            
+            { 
+                id: 12, 
+                name: 'ASERTAIN', 
+                year: 2024, 
+                location: 'Espacio Gallery',
+                city: 'London',
             },
             ]
         }
