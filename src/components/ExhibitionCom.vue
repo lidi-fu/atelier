@@ -123,6 +123,13 @@ export default {
                 location: 'Espacio Gallery',
                 city: 'London',
             },
+            { 
+                id: 13, 
+                name: 'Reverse Alchemy - RCA & K-Arts & Meta', 
+                year: 2024, 
+                location: 'Hyundai CMK',
+                city: 'Soeul',
+            },
             ]
         }
     },
